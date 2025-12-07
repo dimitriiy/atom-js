@@ -1,3 +1,5 @@
+import '../lib_ver_2';
+
 type Computed<T> = (get: <U>(atom: Atom<U>) => U) => T;
 type InitState<T> = T | Computed<T>;
 type Subscriber<T> = (newValue: T) => void;

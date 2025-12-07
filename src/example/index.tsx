@@ -40,13 +40,3 @@ export const PriceCalculator: React.FC = () => {
     </div>
   );
 };
-
-// test batching
-priceAtom.subscribe((v) => console.log('priceAtom', v, priceAtom));
-quantityAtom.subscribe((v) => console.log('quantityAtom', v, quantityAtom));
-
-priceAtom.set(1);
-priceAtom.set(2);
-priceAtom.set(33);
-quantityAtom.set(133);
-quantityAtom.set(8);

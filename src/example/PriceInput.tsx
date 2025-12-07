@@ -1,10 +1,12 @@
+import React from 'react';
+
 interface PriceInputProps {
   value: number;
   onChange: (value: number) => void;
   label: string;
 }
 
-export const PriceInput: React.FC<PriceInputProps> = ({ value, onChange, label }) => {
+export const PriceInput: React.FC<PriceInputProps> = React.memo(({ value, onChange, label }) => {
   return (
     <div className="price-input-wrapper">
       <label className="price-label">{label}</label>
@@ -22,4 +24,4 @@ export const PriceInput: React.FC<PriceInputProps> = ({ value, onChange, label }
       </div>
     </div>
   );
-};
+});
